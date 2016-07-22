@@ -8,39 +8,17 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements AdapterView.OnClickListener {
+public class MainActivity extends AppCompatActivity {
 
-    Button popularMoviesButton;
-    Button stockHawkButton;
-    Button buildItBiggerButton;
-    Button makeYourAppMaterialButton;
-    Button goUbiquitousButton;
-    Button capstoneButton;
     final Context mContext = MainActivity.this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        popularMoviesButton = (Button) findViewById(R.id.popular_movies);
-        stockHawkButton = (Button) findViewById(R.id.stock_hawk);
-        buildItBiggerButton = (Button) findViewById(R.id.build_it_bigger);
-        makeYourAppMaterialButton = (Button) findViewById(R.id.make_your_app_material);
-        goUbiquitousButton = (Button) findViewById(R.id.go_ubiquitous);
-        capstoneButton = (Button) findViewById(R.id.capstone);
-
-        popularMoviesButton.setOnClickListener(this);
-        stockHawkButton.setOnClickListener(this);
-        buildItBiggerButton.setOnClickListener(this);
-        makeYourAppMaterialButton.setOnClickListener(this);
-        goUbiquitousButton.setOnClickListener(this);
-        capstoneButton.setOnClickListener(this);
-
     }
 
-    @Override
-    public void onClick(View view) {
+    public void showToast(View view) {
         if (view.getId() == R.id.popular_movies){
             Toast.makeText(mContext, "This is my \"Popular Movies\" App", Toast.LENGTH_LONG).show();
         }
